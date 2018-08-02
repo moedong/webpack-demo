@@ -28,3 +28,6 @@ https://github.com/jantimon/html-webpack-plugin/issues/100
 
 https://github.com/moedong/webpack-MultiplePage  
  
+https://webpack.docschina.org/plugins/commons-chunk-plugin
+
+https://github.com/teabyii/webpack-examples/blob/master/optimize/webpack.config.js
