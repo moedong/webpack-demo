@@ -1,1 +1,1 @@
-webpackJsonp([1],[,,,function(n,o,b){b(4),console.log("bbb")},function(n,o){}],[3]);
+webpackJsonp([1],[,,,function(n,o,b){b(4),b(0),console.log("bbb")},function(n,o){}],[3]);

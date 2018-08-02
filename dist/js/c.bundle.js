@@ -1,1 +1,1 @@
-webpackJsonp([0],{5:function(c,n,o){o(6),console.log("ccc")},6:function(c,n){}},[5]);
+webpackJsonp([0],{5:function(c,n,o){o(6),o(0),console.log("ccc")},6:function(c,n){}},[5]);
