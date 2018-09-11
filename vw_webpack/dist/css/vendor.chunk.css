@@ -1,0 +1,22 @@
+h1 {
+  color: rgb(114, 191, 190);
+}
+
+#color {
+  width: 40vw;
+  height: 40vw;
+  margin: 0 auto;
+  content: 'viewport-units-buggyfill; width: 40vw; height: 40vw';
+}
+
+#button{
+  width:26.667vw;
+  height: 6.4vw;
+  line-height:6.4vw;
+  color: rgb(255, 255, 255);
+  border-radius: 0.533vw;
+  font-size:3.2vw;
+  display:block;
+  text-align:center;
+  content: 'viewport-units-buggyfill; width: 26.667vw; height: 6.4vw; line-height: 6.4vw; border-radius: 0.533vw; font-size: 3.2vw';
+}

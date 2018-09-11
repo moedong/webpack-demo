@@ -1,5 +1,5 @@
 {
-  "name": "example6",
+  "name": "multiple-pages",
   "version": "1.0.0",
   "description": "",
   "main": "webpack.config.js",
@@ -11,8 +11,10 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "copy-webpack-plugin": "^4.5.2",
     "css-loader": "^1.0.0",
     "extract-text-webpack-plugin": "^3.0.2",
+    "html-webpack-include-assets-plugin": "^1.0.4",
     "html-webpack-plugin": "^2.30.1",
     "jsx-loader": "^0.13.2",
     "raw-loader": "^0.5.1",
