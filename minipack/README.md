@@ -2,16 +2,15 @@
 
 > ??????? webpack
 
-
 ### ??
 
-Start by installing dependencies:
+installing dependencies:
 
 ```sh
 $ npm install
 ```
 
-And then run our script:
+run our script:
 
 ```sh
 $ npm run dev
