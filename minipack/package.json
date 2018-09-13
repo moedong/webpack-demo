@@ -1,0 +1,23 @@
+{
+  "name": "minipack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "entry.js",
+  "scripts": {
+    "dev": "node lib/minipack.js"
+  },
+  "author": "moedong",
+  "license": "MIT",
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-traverse": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babylon": "^6.18.0",
+    "chalk": "^2.4.1",
+    "ora": "^2.1.0",
+    "tildify": "^1.2.0"
+  },
+  "devDependencies": {
+  }
+}
