@@ -1,0 +1,1 @@
+webpackJsonp([1],{"./src/css/b.css":function(s,c){},"./src/js/b.ts":function(s,c,e){"use strict";Object.defineProperty(c,"__esModule",{value:!0});var b=e("./src/css/b.css"),n=(e.n(b),e("./src/css/base.css"));e.n(n);console.log("bbb")}},["./src/js/b.ts"]);
