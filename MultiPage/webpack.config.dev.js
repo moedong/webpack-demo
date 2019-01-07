@@ -3,6 +3,9 @@ var webpack = require('webpack')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 const glob = require('glob');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HappyPack = require('happypack');
+// 构造出共享进程池，进程池中包含5个子进程
+const happyThreadPool = HappyPack.ThreadPool({ size: 5 });
 
 const webpackConfig = {
   devtool: 'cheap-eval-source-map',
@@ -24,6 +27,22 @@ const webpackConfig = {
             warnings: false
         }
     }),
+    new HappyPack({
+      id: 'css',
+      //参考 https://github.com/amireh/happypack/issues/223
+      loaders: [{
+        loader: 'css-loader',
+        options: {
+          minimize: true,
+          sourceMap: false
+        }
+      }],
+    }),
+    new HappyPack({
+      id: 'html',
+      // 参考 https://github.com/amireh/happypack/issues/223
+      loaders: ['raw-loader'],
+    }),
     new ExtractTextPlugin({
       filename: 'css/[name].chunk.css?[hash]'
     }),
@@ -32,19 +51,23 @@ const webpackConfig = {
   module: {
     loaders: [{ 
       test: /\.css$/, 
-      //注意，使用ExtractTextPlugin时，css相关的loader配置需要修改成如下
       use: ExtractTextPlugin.extract({
-        fallback: 'style-loader',
-        use: [{
-            loader: 'css-loader',
-            options: {
-                minimize: true
-            }
-        }]
+        use: ['happypack/loader?id=css'],
       }) 
+      //注意，使用ExtractTextPlugin时，css相关的loader配置需要修改成如下
+      // use: ExtractTextPlugin.extract({
+      //   fallback: 'style-loader',
+      //   use: [{
+      //       loader: 'css-loader',
+      //       options: {
+      //           minimize: true
+      //       }
+      //   }]
+      // }) 
     }, {
       test: /\.html$/,
-      loader: "raw-loader" // loaders: ['raw-loader'] is also perfectly acceptable.
+      //loader: "raw-loader", // loaders: ['raw-loader'] is also perfectly acceptable.
+      use: ['happypack/loader?id=html']
     }]
   },
   devServer: {

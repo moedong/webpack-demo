@@ -1,4 +1,8 @@
 import './../css/a.css'
 import './../css/base.css'
 
-console.log('aqaa')
+function hello(msg: string): void {
+    console.log(`hello, ${msg}`);
+}
+
+hello('moedong');
